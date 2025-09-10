@@ -1,4 +1,4 @@
-[8:30 pm, 19/8/2025] Aastha: #include <iostream>
+#include <iostream>
 using namespace std;
 
 int main() {
