@@ -3,34 +3,28 @@ using namespace std;
 
 int main() {
     int n;
-    cout << "Enter the number of elements: ";
+    cout << "Enter array size: ";
     cin >> n;
 
     int arr[100];
-    cout << "Enter " << n << " elements:\n";
-    for (int i = 0; i < n; i++) {
-        cin >> arr[i];
-    }
+    cout << "Enter array elements: ";
+    for (int i = 0; i < n; i++) cin >> arr[i];
 
-    int distinctCount = 0;
+    int count = 0;
 
     for (int i = 0; i < n; i++) {
-        bool isDuplicate = false;
-
-        // Check if arr[i] appeared before
-        for (int j = 0; j < i; j++) {
-            if (arr[i] == arr[j]) {
-                isDuplicate = true;
-                break;
-            }
+        int j;
+        for (j = 0; j < i; j++) {
+            if (arr[i] == arr[j])
+                break;  
         }
-
-        if (!isDuplicate) {
-            distinctCount++;
-        }
+        if (j == i) 
+            count++;
     }
 
-    cout << "Total number of distinct elements: " << distinctCount << endl;
+    cout << "Number of distinct elements: " << count << endl;
 
     return 0;
 }
+
+
