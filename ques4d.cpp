@@ -1,21 +1,18 @@
 #include <iostream>
-#include <cstring> // for strcmp, strcpy
+#include <cstring> 
 using namespace std;
 
 int main() {
     int n;
     cout << "Enter number of strings: ";
     cin >> n;
-    cin.ignore(); // clear newline from buffer
 
-    char str[50][100]; // max 50 strings, each up to 99 chars
+    char str[50][100];
 
     cout << "Enter " << n << " strings:\n";
     for (int i = 0; i < n; i++) {
         cin.getline(str[i], 100);
     }
-
-    // Bubble sort for strings
     char temp[100];
     for (int i = 0; i < n - 1; i++) {
         for (int j = 0; j < n - i - 1; j++) {
@@ -34,3 +31,4 @@ int main() {
 
     return 0;
 }
+
